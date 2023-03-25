@@ -4,7 +4,10 @@
 
 #include <stdio.h>
 
-/ main - prints betty a number /
+/**
+ *main - prints a number
+ *Return: Always (Sucess)
+ */
 
 int main(void)
 {
