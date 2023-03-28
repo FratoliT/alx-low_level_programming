@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * puts2 - Function prints one character out of two
+ * puts_half - Function prints one character out of two
  * starting with the first one
  * @str - string input
- * Return:print
+ * Return: print
  */
 
-void puts2(char *str)
+void puts_half(char *str)
 {
 int i = 0;
 
