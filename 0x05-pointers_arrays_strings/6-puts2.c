@@ -10,9 +10,6 @@
 void puts2(char *str)
 {
 int i = 0;
-int longi = 0;
-char *y = 0;
-int 0;
 
 for (; str[i] != '\0'; i++)
 {
