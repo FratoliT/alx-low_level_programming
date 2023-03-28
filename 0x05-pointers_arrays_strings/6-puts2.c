@@ -3,7 +3,7 @@
 /**
  * puts2 - Function prints one character out of two
  * starting with the first one
- * @str - input
+ * @str - string input
  * Return:print
  */
 
