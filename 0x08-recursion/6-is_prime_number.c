@@ -7,23 +7,22 @@
  */
 int helperfunction(int num, int i)
 
+if (i < num)
 {
-	if (i < num)
-	{
 
-	if (num % i == 0)
+if (num % i == 0)
 
-	{
-			return (0);
-	}
-	else
-	{
-		return (helperfunction(num, i + 1));
-	}
+{
+return (0);
 }
 else
 {
-	return (1);
+return (helperfunction(num, i + 1));
+}
+}
+else
+{
+return (1);
 }
 }
 
