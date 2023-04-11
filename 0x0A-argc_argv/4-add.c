@@ -1,42 +1,58 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
- * main - prints the minimum number of coins
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: 0 (success), 1 (error)
- *
+ * check_num - checks string
+ * @str: array str
+ * Return: 0 (success)
  */
+int check_num(char *str)
+{
+	unsigned int count;
+	count = 0;
+	while (count < strlen(str))
+	{
+		if (!digit(str[count]))
+		{
+			return (0);
+		}
+		count++;
+	}
+	return (1);
+}
+/**
+ * main - print name of the program
+ * @argc: Count arguments
+ * @argv: Arguments
+ * Return: Always 0 (success)
+ */
+
 int main(int argc, char *argv[])
 {
-int num, j, result;
-int coins[] = {25, 10, 5, 2, 1};
 
-if (argc != 2)
+
+int sum = 0;
+int str_int;
+int count;
+
+count = 1;
+while (count < argc)
 {
-printf("error\n");
-return (1);
+
+	if (check_num(argv[count]))
+	{
+		str_int = atoi(argv[count]);
+		sum += str_int;
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+count++;
 }
-num = atoi(argv[1]);
-result = 0;
+printf("%d\n", sum);
 
-if (num < 0)
-{
-printf("0\n");
 return (0);
 }
-for (j = 0; j < 5 && num >= 0; j++)
-{
-while (num >= coins[j])
-{
-result++;
-num -= coins[j];
-}
-}
-printf("%d\n", result);
-return (0);
-}
-
-
