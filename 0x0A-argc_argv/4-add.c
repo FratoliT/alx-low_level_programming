@@ -10,10 +10,11 @@
 int check_num(char *str)
 {
 	unsigned int count;
+
 	count = 0;
 	while (count < strlen(str))
 	{
-		if (!digit(str[count]))
+		if (str[count])
 		{
 			return (0);
 		}
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
 
 
 int sum = 0;
-int str_int;
+int str_to_int;
 int count;
 
 count = 1;
@@ -42,8 +43,8 @@ while (count < argc)
 
 	if (check_num(argv[count]))
 	{
-		str_int = atoi(argv[count]);
-		sum += str_int;
+		str_to_int = atoi(argv[count]);
+		sum += str_to_int;
 	}
 	else
 	{
@@ -51,6 +52,7 @@ while (count < argc)
 		return (1);
 	}
 count++;
+
 }
 printf("%d\n", sum);
 
