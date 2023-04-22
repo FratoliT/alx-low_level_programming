@@ -5,7 +5,7 @@
  *
  *
  */
-struct dog 
+struct dog
 {
 
 char *name;
