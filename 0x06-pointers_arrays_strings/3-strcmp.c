@@ -4,7 +4,6 @@
  * _strcmp - copy a string
  * @s1: input value
  * @s2: input value
- * @n: input value
  * Return: s1[i] - s[i]
  */
 int _strcmp(char *s1, char *s2)
