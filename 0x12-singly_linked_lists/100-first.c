@@ -2,7 +2,7 @@
 #include <stdio.h>
 void first(void) __attribute__((constructor));
 /**
- * main - prints a sentence before the main
+ * first - prints a sentence before the main
  *
  */
 void first(void)
