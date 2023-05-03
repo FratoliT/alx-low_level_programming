@@ -4,7 +4,7 @@
 
 /**
  * list_len - returns the number of elements in the list
- * @: first pointer
+ * @h: first pointer
  * Return: number of element
  */
 size_t list_len(const list_t *h)
