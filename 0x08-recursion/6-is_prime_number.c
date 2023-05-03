@@ -1,30 +1,6 @@
 #include "main.h"
-/**
- * helperfunction - returns 0 or 1
- * @num: number being checked
- * @i: possible factor of the number
- * Returns: 0 if not prime, 1 if prime
- */
-int helperfunction(int num, int i)
 
-if (i < num)
-{
-
-if (num % i == 0)
-
-{
-return (0);
-}
-else
-{
-return (helperfunction(num, i + 1));
-}
-}
-else
-{
-return (1);
-}
-}
+int actual_prime(int n, int i);
 
 /**
  * is_prime_number - check if number is prime or not
@@ -35,11 +11,21 @@ return (1);
 int is_prime_number(int n)
 {
 	if (n <= 1)
-	{
 		return (0);
-	}
-	else
-	{
-		return (helperfunction(n, 2));
-	}
+	return (actual_prime(n, n - 1));
+}
+
+/**
+ * actual_prime - calculates if a number is prime recursively
+ * @n: number being checked
+ * @i: possible factor of the number
+ * Returns: 0 if not prime, 1 if prime
+ */
+int actual_prime(int n, int i)
+{
+	if (i == 1)
+		return (1);
+	if (n % i == 0 && i > 0)
+		return (0);
+	return (actual_prime(n, i - 1));
 }
