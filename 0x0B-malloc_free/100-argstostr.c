@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
 /**
@@ -5,38 +6,46 @@
  * @ac: int input
  * @av: double pointer array
  * Return: 0
- */
+*/
 char *argstostr(int ac, char **av)
 {
-	int i, j;
-	int k = 0, l = 0;
-	char *str;
+	int ch = 0, i = 0, j = 0, k = 0;
+	char *s;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	while (i < ac)
 	{
-		for (j = 0; av[i][j]; j++)
-			k++;
-	}
-	l = ac;
+		while (av[i][j])
+		{
+			ch++;
+			j++;
+		}
 
-	str = malloc(sizeof(char) * l + 1);
-	if (str == NULL)
-		return (NULL);
-	for (i = 0; i < ac; i++)
+		j = 0;
+		i++;
+	}
+	s = malloc((sizeof(char) * ch) + ac + 1);
+
+	i = 0;
+	while (av[i])
 	{
-	for (j = 0; av[i][j]; j++)
-	{
-		str[k] = av[i][j];
+		while (av[i][j])
+		{
+			s[k] = av[i][j];
+			k++;
+			j++;
+		}
+		s[k] = '\n';
+
+		j = 0;
 		k++;
+		i++;
 	}
-	if (str[k] == '\0')
-	{
-		str[k++] = '\n';
-	}
-	}
-	return (str);
+
+	k++;
+	s[k] = '\0';
+	return (s);
 }
 
