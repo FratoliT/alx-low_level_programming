@@ -14,10 +14,10 @@ return (actual_prime(n, n - 1));
 }
 
 /**
-* actual_prime - calculates if a number is primei recursively
+* actual_prime - calculates if a number is prime recursively
 * @n: number being checked
 * @i: possible factor of the number
-* Returns: 0 if not prime, 1 if prime
+* Return: 0 if not prime, 1 if prime
 */
 int actual_prime(int n, int i)
 {
