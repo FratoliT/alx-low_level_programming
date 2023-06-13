@@ -24,7 +24,7 @@ flex[x] = malloc(sizeof(int) * width);
 
 if (flex[x] == NULL)
 {
-for (x >= 0; x--)
+for (; x >= 0; x--)
 free(flex[x]);
 free(flex);
 return (NULL);
@@ -32,7 +32,7 @@ return (NULL);
 }
 for (x = 0; x < height; x++)
 {
-for (y = 0; y < width ; width; y++)
+for (y = 0; y < width; y++)
 flex[x][y] = 0;
 
 }

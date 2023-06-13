@@ -1,8 +1,6 @@
-at 3-main.c
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * print_grid - prints a grid of integers
  * @grid: the address of the two dimensional grid
